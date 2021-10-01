@@ -1,0 +1,25 @@
+#   a116_buggy_image.py
+
+
+import turtle as trtl
+# instead of a descriptive name of the turtle such as painter,
+# a less useful variable name x is used
+spider = trtl.Turtle()
+spider.pensize(40)
+spider.circle(20)
+l = 8
+d = 90
+a = 380 / l
+print("a=", a)
+spider.pensize(5)
+#leaving n as n because it is the number of legs (l)
+n = 0
+while (n < l):
+  spider.goto(0,0)
+  spider.setheading(a*n)
+  spider.forward(d)
+  print("a*n=", a*n)
+  n = n + 1
+spider.hideturtle()
+wn = trtl.Screen()
+wn.mainloop()
