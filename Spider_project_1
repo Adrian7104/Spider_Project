@@ -5,7 +5,7 @@ import turtle as trtl
 spider = trtl.Turtle()
 spider.pensize(40)
 spider.circle(20)
-w = 6
+'''w = 6
 y = 70
 z = 380 / w
 spider.pensize(5)
@@ -15,6 +15,6 @@ while (n < w):
   spider.setheading(z*n)
   spider.forward(y)
   n = n + 1
-spider.hideturtle()
+spider.hideturtle()'''
 wn = trtl.Screen()
 wn.mainloop()
