@@ -1,0 +1,36 @@
+#   a116_buggy_image.py
+
+
+import turtle as trtl
+# create the spider body
+spider = trtl.Turtle()
+spider.pensize(40)
+spider.circle(20)
+# configure the spider's legs
+l = 4
+d = 90
+a = 135 / l
+print("a=", a)
+spider.pensize(5)
+#leaving n as n because it is the number of legs (l)
+
+#drawing the spider's legs
+n = 0
+while (n < l):
+  spider.goto(0,20)
+  spider.setheading(a*n)
+  spider.forward(d)
+  print("a*n=", a*n)
+  n = n + 1
+  
+n = 0
+while (n < l):
+  spider.goto(0,20)
+  spider.setheading(180+a*n)
+  spider.forward(d)
+  print("a*n=", a*n)
+  n = n + 1
+  
+spider.hideturtle()
+wn = trtl.Screen()
+wn.mainloop()
