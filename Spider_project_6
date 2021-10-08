@@ -1,0 +1,53 @@
+import turtle as trtl
+
+painter = trtl.Turtle()
+painter.pensize(5)
+
+# draw curved arc
+painter.penup()
+painter.goto(0, -20)
+painter.pendown()
+painter.fillcolor("black")
+painter.begin_fill()
+painter.circle(85)
+painter.end_fill()
+painter.speed(0)
+
+# draw segmented arc 
+n = 0
+heading = 50
+while (n < 4):
+  painter.setheading(heading)
+  painter.penup()
+  painter.goto(0,0)
+  painter.pendown()
+  painter.circle(80, 180, 20)
+  painter.right(30)
+  n = n + 1
+  heading = heading + 20*n
+
+n = 0
+heading = -30
+while (n < 4):
+  painter.setheading(heading)
+  painter.penup()
+  painter.goto(30,0)
+  painter.pendown()
+  painter.pencolor("black")
+  painter.pensize(5)
+  painter.circle(80,-180,20)
+  painter.right(270)
+  n = n + 1
+  heading = heading - 20*n
+
+painter.penup()  
+painter.goto(60,-20)
+painter.pendown()
+painter.pencolor("black")
+painter.begin_fill()
+painter.circle(50)
+painter.end_fill()
+
+
+wn = trtl.Screen()
+wn.mainloop()
